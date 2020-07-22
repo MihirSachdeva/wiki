@@ -593,6 +593,7 @@ section{
     bottom: 0px;
     margin-top: 10px;
     border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 @media screen and (max-width: 900px) {
