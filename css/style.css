@@ -539,18 +539,18 @@ section{
 
 .team-members-container {
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(2, 40vw);
     row-gap: 50px;
     column-gap: 30px;
 }
 
 .member-card {
-    width: 200px;
-    height: 200px;
+    width: 40vw;
+    height: auto;
     background-color: #EEF6F9;
-    border-radius: 2px;
+    border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .member-card-header {
@@ -558,46 +558,61 @@ section{
     flex-direction: column;
     align-items: flex-start;
     font-family: 'SF UI Display Semibold';
-    padding: 10px;
-    font-size: 14px;
+    margin: 12px 0 10px 20px;
+    font-size: 1.8vw;
+}
+
+.member-name {
+    /* white-space: nowrap; */
+    text-align: left;
 }
 
 .member-role {
     font-family: 'SF UI Display Light';
-    font-size: 10px;
+    font-size: 1.15vw;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.member-about {
+    font-family: 'SF UI Display Medium';
+    font-size: 1.23vw;
+    margin: 0 0 20px 20px;
+    text-align: left;
 }
 
 .member-avatar {
-    margin-top: auto;
-    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .member-image {
-    height: 145px;
+    height: 180px;
     position: relative;
     bottom: 0px;
+    margin-top: 10px;
+    border-bottom-right-radius: 20px;
 }
 
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
     .team-members-container {
-        grid-template-columns: repeat(3, 200px);
-    }
-    
-}
-
-@media screen and (max-width: 750px) {
-    .team-members-container {
-        grid-template-columns: repeat(2, 175px);
-        row-gap: 20px;
-        column-gap: 10px;
+        display: flex;
+        flex-direction: column;
     }
     .member-card {
-        width: 175px;
-        height: 175px;
+        width: 90vw;
+        height: auto;
+        margin: 13px 0;
     }
-    .member-image {
-        bottom: 24px;
+    .member-card-header {
+        font-size: 22px;
+    }
+    .member-role {
+        font-size: 13px;
+    }
+    .member-about {
+        font-size: 15px;
     }
 }
 
